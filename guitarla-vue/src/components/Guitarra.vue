@@ -2,12 +2,12 @@
     import { ref } from 'vue';
 
     // const numero = ref(0)
-    // const props = defineProps({
-    //     guitarra: {
-    //         type: Object,
-    //         required: true
-    //     }
-    // })
+    const props = defineProps({
+        guitarra: {
+            type: Object,
+            required: true
+        }
+    })
 
     defineEmits(['agregar-carrito'])
 </script>
