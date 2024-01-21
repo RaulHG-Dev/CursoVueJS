@@ -13,9 +13,11 @@
 
     const guitarras = ref([])
     const carrito = ref([])
+    const guitarra = ref({})
     // console.log(guitarras.value)
     onMounted(() => {
         guitarras.value = db;
+        guitarra.value = db[3]
     })
 
     const agregarCarrito = (guitarra) => {
@@ -45,8 +47,10 @@
 <template>
     <Header
         :carrito="carrito"
+        :guitarra="guitarra"
         @decrementar-cantidad="decrementarCantidad"
         @incrementar-cantidad="incrementarCantidad"
+        @agregar-carrito="agregarCarrito"
     />
     <main class="container-xl mt-5">
         <h2 class="text-center">Nuestra Colección</h2>
