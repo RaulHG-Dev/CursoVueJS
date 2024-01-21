@@ -38,13 +38,19 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
+                                        <tr
+                                            v-for="producto in carrito"
+                                        >
                                             <td>
-                                                <img class="img-fluid" src="/img/guitarra_02.jpg" alt="imagen guitarra">
+                                                <img 
+                                                    class="img-fluid" 
+                                                    :src="'/img/' + producto.imagen + '.jpg'" 
+                                                    :alt="'Imagen guitarra ' + producto.nombre"
+                                                />
                                             </td>
-                                            <td>SRV</td>
+                                            <td>{{ producto.nombre }}</td>
                                             <td class="fw-bold">
-                                                    $299
+                                                    ${{ producto.precio }}
                                             </td>
                                             <td class="flex align-items-start gap-4">
                                                 <button
@@ -53,7 +59,7 @@
                                                 >
                                                     -
                                                 </button>
-                                                    1
+                                                    {{ producto.cantidad }}
                                                 <button
                                                     type="button"
                                                     class="btn btn-dark"
