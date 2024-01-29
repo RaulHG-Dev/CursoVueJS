@@ -2,4 +2,4 @@
 
 ### Enlace a proyecto GuitarLA Vue:
 
-[Deploy Netlify](https://teal-maamoul-35cc1c.netlify.app/)
+[Deploy Netlify](https://vue-curso.rdev.com.mx/)
