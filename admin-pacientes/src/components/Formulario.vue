@@ -11,7 +11,9 @@
 
     // const leerNombre = (e) => nombre.value = e.target.value
     const validar = () => {
-        
+        if(Object.values(paciente).includes('')) {
+            return;
+        }
     }
 </script>
 
