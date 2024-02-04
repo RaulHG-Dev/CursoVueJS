@@ -3,7 +3,7 @@
 
     const nombre = ref('')
 
-    const leerNombre = (e) => nombre.value = e.target.value
+    // const leerNombre = (e) => nombre.value = e.target.value
 </script>
 
 <template>
@@ -16,14 +16,14 @@
 
         <form class="bg-white shadow-md rounded-lg py-10 px-5 mb-10">
             <div class="mb-5">
+                {{ nombre }}
                 <label for="mascota" class="block text-gray-700 uppercase font-bold">Nombre Mascota</label>
                 <input 
                     type="text" 
                     id="mascota" 
                     placeholder="Nombre de la mascota" 
                     class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
-                    :value="nombre"
-                    @input="leerNombre"
+                    v-model="nombre"
                 />
             </div>
             <div class="mb-5">
