@@ -3,6 +3,7 @@
   import Header from './components/Header.vue'
   import Formulario from './components/Formulario.vue'
 
+  const pacientes = ref([]);
   const paciente = reactive({
     nombre: '',
     propietario: '',
@@ -11,7 +12,9 @@
     sintomas: ''
   })
 
-  const pacientes = ref([]);
+  const guardarPaciente = () => {
+    pacientes.value.push(paciente)
+  }
 </script>
 
 <template>
@@ -25,6 +28,7 @@
         v-model:email="paciente.email"
         v-model:alta="paciente.alta"
         v-model:sintomas="paciente.sintomas"
+        @guardar-paciente="guardarPaciente"
       />
 
       <div class="md:w-1/2 md:h-screen overflow-y-scroll">
