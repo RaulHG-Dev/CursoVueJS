@@ -7,6 +7,14 @@
         mensaje: ''
     })
 
+    defineEmits(['update:nombre'])
+
+    const props = defineProps({
+        nombre: {
+            type: String,
+            required: true
+        }
+    })
     // const leerNombre = (e) => nombre.value = e.target.value
     const validar = () => {
         if(Object.values(paciente).includes('')) {
@@ -39,7 +47,7 @@
                     id="mascota" 
                     placeholder="Nombre de la mascota" 
                     class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
-                    
+                    @input="$emit('update:nombre', $event.target.value)"
                 />
             </div>
             <div class="mb-5">
