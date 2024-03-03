@@ -5,6 +5,8 @@
     const presupuesto = ref(0)
     const error = ref('')
 
+    const emit = defineEmits(['definir-presupuesto']);
+
     const definirPresupuesto = () => {
         if(presupuesto.value <= 0) {
             error.value = 'Presupuesto no válido'
@@ -12,6 +14,8 @@
                 error.value = '';
             }, 3000);
         }
+
+        emit('definir-presupuesto', presupuesto.value);
     }
 </script>
 
