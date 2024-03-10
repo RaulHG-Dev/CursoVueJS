@@ -21,6 +21,10 @@
         modal.mostrar = true;
         modal.animar = true;
     }
+    const ocultarModal = () => {
+        modal.mostrar = false;
+        modal.animar = false;
+    }
 </script>
 
 <template>
@@ -50,6 +54,7 @@
 
             <Modal
                 v-if="modal.mostrar"
+                @ocultar-modal="ocultarModal"
             />
         </main>
     </div>
@@ -120,6 +125,5 @@
         width: 5rem;
         cursor: pointer;
     }
-</style>import ModalVue from './components/Modal.vue';
-import ModalVue from './components/Modal.vue';
+</style>
 
