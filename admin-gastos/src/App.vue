@@ -37,6 +37,11 @@
             modal.mostrar = false;
         }, 300);
     }
+
+    const guardarGasto = () => {
+        console.log('desde app')
+        console.log(gasto)
+    }
 </script>
 
 <template>
@@ -67,6 +72,7 @@
             <Modal
                 v-if="modal.mostrar"
                 @ocultar-modal="ocultarModal"
+                @guardar-gasto="guardarGasto"
                 :modal="modal"
                 v-model:nombre="gasto.nombre"
                 v-model:cantidad="gasto.cantidad"
