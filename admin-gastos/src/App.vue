@@ -3,6 +3,7 @@
     import Presupuesto from './components/Presupuesto.vue';
     import ControlPresupuesto from './components/ControlPresupuesto.vue';
     import iconoNuevoGasto from './assets/img/nuevo-gasto.svg'
+    import { generarId } from './helpers';
     import Modal from './components/Modal.vue';
 
     const modal = reactive({
@@ -45,7 +46,7 @@
         console.log(gasto)
         gastos.value.push({
             ...gasto,
-            id: 123
+            id: generarId()
         });
     }
 </script>
