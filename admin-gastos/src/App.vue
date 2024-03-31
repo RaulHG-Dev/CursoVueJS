@@ -53,8 +53,6 @@
     }
 
     const guardarGasto = () => {
-        console.log('desde app')
-        console.log(gasto)
         gastos.value.push({
             ...gasto,
             id: generarId()
@@ -68,6 +66,12 @@
             id: null,
             fecha: Date.now()
         });
+    }
+
+    const seleccionarGasto = (id) => {
+        const gastoEditar = gastos.value.filter(gasto => gasto.id === id)[0];
+        Object.assign(gasto, gastoEditar);
+        mostrarModal();
     }
 </script>
 
@@ -98,6 +102,7 @@
                     v-for="gasto in gastos"
                     :key="gasto.id"
                     :gasto="gasto"
+                    @seleccionar-gasto="seleccionarGasto"
                 />
             </div>
 

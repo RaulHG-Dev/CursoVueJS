@@ -23,7 +23,9 @@
             type: Object,
             required: true
         }
-    })
+    });
+
+    defineEmits(['seleccionar-gasto'])
 </script>
 
 <template>
@@ -36,7 +38,10 @@
             >
             <div class="detalles">
                 <p class="categoria">{{ gasto.categoria }}</p>
-                <p class="nombre">{{ gasto.nombre }}</p>
+                <p 
+                    class="nombre"
+                    @click="$emit('seleccionar-gasto', gasto.id)"
+                >{{ gasto.nombre }}</p>
 
                 <p class="fecha">
                     Fecha
