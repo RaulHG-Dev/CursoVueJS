@@ -7,3 +7,7 @@
 ### Enlace a proyecto Administrador Citas:
 
 [Deploy Netlify](https://vue-curso-citas.rdev.com.mx/)
+
+### Enlace a proyecto Panificador de gastos:
+
+[Deploy Netlify](https://admin-gastos.rdev.com.mx/)
