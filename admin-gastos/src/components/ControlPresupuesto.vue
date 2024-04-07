@@ -1,6 +1,7 @@
 <script setup>
-    import imagen from '../assets/img/grafico.jpg'
-    import { formatearCantidad } from '../helpers'
+    import CircleProgress from 'vue3-circle-progress';
+    import "vue3-circle-progress/dist/circle-progress.css";
+    import { formatearCantidad } from '../helpers';
 
     defineEmits(['reset-app']);
 
@@ -23,8 +24,13 @@
 <template>
     <div class="dos-columnas">
         <div class="contendor-grafico">
-            <img 
-                :src="imagen"
+            <CircleProgress
+                :percent="20"
+                :size="250"
+                :border-width="30"
+                :border-bg-width="30"
+                fill-color="#3b82f6"
+                empty-color="#e1e1e1"
             />
         </div>
         <div class="contenedor-presupuesto">
