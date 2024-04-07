@@ -125,6 +125,13 @@
         }
         return gastos.value;
     });
+
+    const resetApp = () => {
+        if(confirm('¿Desea reiniciar presupuesto y gastos?')) {
+            gastos.value = [];
+            presupuesto.value = 0;
+        }
+    }
 </script>
 
 <template>
@@ -143,6 +150,7 @@
                     :presupuesto="presupuesto"
                     :disponible="disponible"
                     :gastado="gastado"
+                    @reset-app="resetApp"
                 />
             </div>
         </header>
