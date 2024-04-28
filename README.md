@@ -11,3 +11,7 @@
 ### Enlace a proyecto Panificador de gastos:
 
 [Deploy Netlify](https://admin-gastos.rdev.com.mx/)
+
+### Cotizador de Criptomonedas:
+
+[Deploy Netlify](https://crypto-cotizador.rdev.com.mx/)
