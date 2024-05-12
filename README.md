@@ -18,4 +18,4 @@
 
 ### Buscador de Clima:
 
-[Deploy Netlify](https://curso-vue-js-ten.vercel.app/)
+[Deploy Vercel](https://curso-vue-js-ten.vercel.app/)
