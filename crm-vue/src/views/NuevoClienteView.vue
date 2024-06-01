@@ -23,6 +23,8 @@
             <div class="mx-auto md:w-2/3 py-20 px-6">
                 <FormKit
                     type="form"
+                    submit-label="Agregar Cliente"
+                    incomplete-message="No se pudo enviar, revisa los mensajes"
                 >
                     <FormKit
                         type="text"
@@ -55,6 +57,23 @@
                         validation="*matches:/^[0-9]{3}-[0-9]{3}-[0-9]{4}/"
                         :validation-messages="{matches: 'El Formato no es válido'}"
                     />
+
+                    <FormKit
+                        type="text"
+                        label="Empresa de Cliente"
+                        placeholder="Empresa de Cliente"
+                    />
+
+                    <FormKit
+                        type="text"
+                        label="Puesto de Cliente"
+                        placeholder="Puesto de Cliente"
+                    />
+
+                    <!-- <FormKit
+                        type="submit"
+                        label="Agregar Cliente"
+                    /> -->
                 </FormKit>
             </div>
         </div>
