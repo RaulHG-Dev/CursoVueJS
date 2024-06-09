@@ -1,4 +1,5 @@
 <script setup>
+    import { reactive } from 'vue';
     import { FormKit } from '@formkit/vue'
     import RouterLink from '@/components/UI/RouterLink.vue';
     import Heading from '@/components/UI/Heading.vue';
@@ -8,6 +9,10 @@
             type: String
         }
     });
+
+    // const formData = reactive({
+    //     nombre: 'Raul'
+    // })
 
     const handleSubmit = (data) => {
         console.log(data);
@@ -25,6 +30,7 @@
 
         <div class="mx-auto mt-10 bg-white shadow">
             <div class="mx-auto md:w-2/3 py-20 px-6">
+                <!-- :value="formData" -->
                 <FormKit
                     type="form"
                     submit-label="Agregar Cliente"
