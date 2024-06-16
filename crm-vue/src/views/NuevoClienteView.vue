@@ -30,7 +30,7 @@
 <template>
     <div>
         <div class="flex justify-end">
-            <RouterLink to="inicio">
+            <RouterLink to="listado-clientes">
                 Volver
             </RouterLink>
         </div>
