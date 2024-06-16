@@ -8,6 +8,24 @@
       "telefono": "777-210-9674",
       "empresa": "OPL ALMACEN Y SERVICIOS",
       "puesto": "Freelancer"
+    },
+    {
+      "id": "5b0a",
+      "nombre": "Raúl",
+      "apellido": "Hidalgo",
+      "email": "hgraul963@gmail.com",
+      "telefono": "777-210-9674",
+      "empresa": "OPL ALMACEN Y SERVICIOS",
+      "puesto": "Freelancer"
+    },
+    {
+      "id": "18f3",
+      "nombre": "Raúl",
+      "apellido": "Hidalgo",
+      "email": "hgraul963@gmail.com",
+      "telefono": "777-210-9674",
+      "empresa": "OPL ALMACEN Y SERVICIOS",
+      "puesto": "Programador Fullstack"
     }
   ]
 }

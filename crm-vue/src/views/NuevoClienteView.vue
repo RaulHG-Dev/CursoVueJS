@@ -2,8 +2,11 @@
     import { reactive } from 'vue';
     import axios from 'axios';
     import { FormKit } from '@formkit/vue'
+    import { useRoute, useRouter } from 'vue-router';
     import RouterLink from '@/components/UI/RouterLink.vue';
     import Heading from '@/components/UI/Heading.vue';
+
+    const router = useRouter();
 
     defineProps({
         titulo: {
@@ -17,7 +20,9 @@
 
     const handleSubmit = (data) => {
         axios.post('http://localhost:4000/clientes', data)
-            .then(respuesta => console.log(respuesta))
+            .then(respuesta => {
+                router.push({name: 'listado-clientes'});
+            })
             .catch(error => console.log(error));
     }
 </script>
