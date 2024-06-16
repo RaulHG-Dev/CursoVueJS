@@ -1,5 +1,13 @@
 {
-    "clientes": [
-
-    ]
+  "clientes": [
+    {
+      "id": "e473",
+      "nombre": "Raúl",
+      "apellido": "Hidalgo",
+      "email": "hgraul963@gmail.com",
+      "telefono": "777-210-9674",
+      "empresa": "OPL ALMACEN Y SERVICIOS",
+      "puesto": "Freelancer"
+    }
+  ]
 }
