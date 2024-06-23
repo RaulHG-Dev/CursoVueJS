@@ -1,5 +1,5 @@
 <script setup>
-    import { onMounted } from 'vue';
+    import { onMounted, reactive } from 'vue';
     import ClienteService from '@/services/ClienteService';
     import { FormKit } from '@formkit/vue'
     import { useRoute, useRouter } from 'vue-router';
@@ -11,10 +11,16 @@
 
     const {id} = route.params
 
+    const formData = reactive({
+        nombre: '',
+        apellido: ''
+    });
+
     onMounted(() => {
         ClienteService.obtenerCliente(id)
             .then(({data}) => {
-                console.log(data);
+                formData.nombre = data.nombre;
+                formData.apellido = data.apellido;
             }).catch((err) => {
                 console.log(err);
             });
@@ -48,6 +54,7 @@
                     submit-label="Agregar Cliente"
                     incomplete-message="No se pudo enviar, revisa los mensajes"
                     @submit="handleSubmit"
+                    :value="formData"
                 >
                     <FormKit
                         type="text"
@@ -56,6 +63,7 @@
                         placeholder="Nombre de Cliente"
                         validation="required"
                         :validation-messages="{required: 'El Nombre del Cliente es Obligatorio'}"
+                        v-model="formData.nombre"
                     />
 
                     <FormKit
@@ -65,6 +73,7 @@
                         placeholder="Apellido de Cliente"
                         validation="required"
                         :validation-messages="{required: 'El Apellido del Cliente es Obligatorio'}"
+                        v-model="formData.apellido"
                     />
 
                     <FormKit
