@@ -7,7 +7,12 @@
     import Heading from '@/components/UI/Heading.vue';
 
     const router = useRouter();
+    const route = useRoute();
 
+    const {id} = route.params
+
+    console.log(id);
+    
     defineProps({
         titulo: {
             type: String
