@@ -9,6 +9,16 @@
       "empresa": "IZZI Telecom",
       "puesto": "Programador Fullstack",
       "estado": 1
+    },
+    {
+      "id": "0af9",
+      "nombre": "Raúl",
+      "apellido": "Hidalgo",
+      "email": "hgraul963@gmail.com",
+      "telefono": "777-210-9674",
+      "empresa": "OPL ALMACEN Y SERVICIOS",
+      "puesto": "Jefe de Departamento de Seguimiento a Soportes",
+      "estado": 0
     }
   ]
 }
