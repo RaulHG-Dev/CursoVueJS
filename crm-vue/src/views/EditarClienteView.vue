@@ -13,7 +13,11 @@
 
     const formData = reactive({
         nombre: '',
-        apellido: ''
+        apellido: '',
+        email: '',
+        telefono: '',
+        empresa: '',
+        puesto: ''
     });
 
     onMounted(() => {
@@ -21,6 +25,10 @@
             .then(({data}) => {
                 formData.nombre = data.nombre;
                 formData.apellido = data.apellido;
+                formData.email = data.email;
+                formData.telefono = data.telefono;
+                formData.empresa = data.empresa;
+                formData.puesto = data.puesto;
             }).catch((err) => {
                 console.log(err);
             });
@@ -83,6 +91,7 @@
                         placeholder="Email de Cliente"
                         validation="required|email"
                         :validation-messages="{required: 'El Email del Cliente es Obligatorio', email: 'Coloca un email válido'}"
+                        v-model="formData.email"
                     />
 
                     <FormKit
@@ -92,6 +101,7 @@
                         placeholder="Teléfono: XXX-XXX-XXXX"
                         validation="*matches:/^[0-9]{3}-[0-9]{3}-[0-9]{4}/"
                         :validation-messages="{matches: 'El Formato no es válido'}"
+                        v-model="formData.telefono"
                     />
 
                     <FormKit
@@ -99,6 +109,7 @@
                         label="Empresa de Cliente"
                         name="empresa"
                         placeholder="Empresa de Cliente"
+                        v-model="formData.empresa"
                     />
 
                     <FormKit
@@ -106,6 +117,7 @@
                         label="Puesto de Cliente"
                         name="puesto"
                         placeholder="Puesto de Cliente"
+                        v-model="formData.puesto"
                     />
 
                     <!-- <FormKit
