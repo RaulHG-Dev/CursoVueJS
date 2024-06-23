@@ -1,5 +1,5 @@
 <script setup>
-    import { reactive } from 'vue';
+    import { onMounted } from 'vue';
     import ClienteService from '@/services/ClienteService';
     import { FormKit } from '@formkit/vue'
     import { useRoute, useRouter } from 'vue-router';
@@ -11,7 +11,14 @@
 
     const {id} = route.params
 
-    console.log(id);
+    onMounted(() => {
+        ClienteService.obtenerCliente(id)
+            .then(({data}) => {
+                console.log(data);
+            }).catch((err) => {
+                console.log(err);
+            });
+    });
     
     defineProps({
         titulo: {
