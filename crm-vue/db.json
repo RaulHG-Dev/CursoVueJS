@@ -1,16 +1,6 @@
 {
   "clientes": [
     {
-      "id": "cb94",
-      "nombre": "Raúl Actualizado",
-      "apellido": "Hidalgo",
-      "email": "hgraul963@gmail.com",
-      "telefono": "777-210-9674",
-      "empresa": "IZZI Telecom",
-      "puesto": "Programador Fullstack",
-      "estado": true
-    },
-    {
       "id": "0af9",
       "nombre": "Raúl",
       "apellido": "Hidalgo",

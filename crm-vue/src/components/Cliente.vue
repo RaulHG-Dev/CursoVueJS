@@ -8,7 +8,7 @@
         }
     });
 
-    defineEmits(['actualizar-estado']);
+    defineEmits(['actualizar-estado', 'eliminar-cliente']);
 
     const nombreCliente = computed(() => {
         return props.cliente.nombre + ' ' + props.cliente.apellido;
@@ -48,6 +48,7 @@
             >Editar</RouterLink>
             <button
                 class="text-red-600 hover:text-red-900"
+                @click="$emit('eliminar-cliente', cliente.id)"
             >Eliminar</button>
         </td>
     </tr>
