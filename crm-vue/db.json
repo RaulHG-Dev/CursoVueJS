@@ -8,7 +8,7 @@
       "telefono": "777-210-9674",
       "empresa": "IZZI Telecom",
       "puesto": "Programador Fullstack",
-      "estado": 1
+      "estado": true
     },
     {
       "id": "0af9",
