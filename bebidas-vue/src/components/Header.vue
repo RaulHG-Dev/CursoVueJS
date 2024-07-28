@@ -28,17 +28,17 @@
                         <img src="/img/logo.svg" alt="Logotipo" class="w-32">
                     </RouterLink>
                 </div>
-                <nav class="flex gap-4">
+                <nav class="flex gap-4 text-white">
                     <RouterLink
                         :to="{name: 'inicio'}"
-                        class="text-white uppercase font-bold"
+                        class="uppercase font-bold"
                         active-class="text-orange-500"
                     >
                         Inicio
                     </RouterLink>
                     <RouterLink
                         :to="{name: 'favoritos'}"
-                        class="text-white uppercase font-bold"
+                        class="uppercase font-bold"
                         active-class="text-orange-500"
                     >
                         Favoritos
@@ -53,7 +53,7 @@
             >
                 <div class="space-y-4">
                     <label 
-                        class="block text-white uppercase font-extrabold text-lg"
+                        class="block uppercase font-extrabold text-lg"
                         for="ingrediente">Nombre o Ingredientes</label>
                     <input 
                         id="ingrediente"
@@ -66,7 +66,7 @@
 
                 <div class="space-y-4">
                     <label 
-                        class="block text-white uppercase font-extrabold text-lg"
+                        class="block uppercase font-extrabold text-lg"
                         for="categoria">Categoría</label>
                     <select 
                         id="categoria"
@@ -82,7 +82,7 @@
                     </select>
                 </div>
 
-                <input type="submit" value="Buscar Receta" class="bg-orange-800 hover:bg-orange-900 cursor-pointer text-white font-extrabold w-full p-2 rounded-lg uppercase">
+                <input type="submit" value="Buscar Receta" class="bg-orange-800 hover:bg-orange-900 cursor-pointer font-extrabold w-full p-2 rounded-lg uppercase">
             </form>
         </div>
     </header>
