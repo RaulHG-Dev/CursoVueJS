@@ -34,9 +34,10 @@
         </v-card-subtitle>
 
         <v-alert
-            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis est labore voluptatibus! Eaque cupiditate minima, at placeat totam, magni doloremque veniam neque porro libero rerum unde voluptatem!"
-            title="Alert title"
+            v-if="auth.hasError"
+            class="my-5"
             type="error"
+            :title="auth.errorMsg"
         ></v-alert>
 
         <v-form class="mt-5">
