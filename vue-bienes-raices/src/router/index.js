@@ -17,19 +17,21 @@ const router = createRouter({
       path: '/admin',
       name: 'admin',
       component: () => import('@/views/admin/AdminLayout.vue'),
-      children: [{
-        path: '/admin/propiedades',
-        name: 'admin-propiedades',
-        component: () => import('@/views/admin/AdminView.vue')
-      }, {
-        path: '/admin/nueva',
-        name: 'nueva-propiedad',
-        component: () => import('@/views/admin/NuevaPropiedadView.vue')
-      }, {
-        path: '/admin/editar/:id',
-        name: 'editar-propiedad',
-        component: () => import('@/views/admin/EditarPropiedadView.vue')
-      }]
+      children: [
+        {
+          path: '/admin/propiedades',
+          name: 'admin-propiedades',
+          component: () => import('@/views/admin/AdminView.vue')
+        }, {
+          path: '/admin/nueva',
+          name: 'nueva-propiedad',
+          component: () => import('@/views/admin/NuevaPropiedadView.vue')
+        }, {
+          path: '/admin/editar/:id',
+          name: 'editar-propiedad',
+          component: () => import('@/views/admin/EditarPropiedadView.vue')
+        }
+      ]
     }
   ]
 })
